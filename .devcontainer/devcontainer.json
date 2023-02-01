@@ -1,0 +1,47 @@
+// Template file for Visual Studio Code
+// Usage:
+// 	- Copy .devcontainer.json.template and rename it as .devcontainer.json
+// 	- Modify the settings and extensions as needed
+// 		For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// 		https://code.visualstudio.com/docs/remote/devcontainerjson-reference
+// 	- Open folder in container!
+{
+	"name": "blueprint",
+	"dockerComposeFile": [
+		"../docker-compose.dev.yml",
+	],
+	"service": "blueprint-app",
+	// In case you want to run more services from the compose file, add them.
+	"runServices": [],
+	// **************************
+	// USED TO DEBUG THE APP WITH debugpy
+	// Override default command with: `/bin/sh -c "while sleep 1000; do :; done"`
+	"overrideCommand": true,
+	// **************************
+	"workspaceFolder": "/app",
+	"shutdownAction": "stopCompose",
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"python.defaultInterpreterPath": "/usr/local/bin/python",
+		"python.linting.enabled": true,
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"njpwerner.autodocstring",
+		"eamodio.gitlens",
+		"donjayamanne.githistory",
+		"mhutchie.git-graph",
+		"GitHub.vscode-pull-request-github",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"ms-python.isort",
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	// Must match the name defined in the container
+	"remoteUser": "user"
+}

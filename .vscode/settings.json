@@ -1,0 +1,60 @@
+{
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": [
+        "--remove-all-unused-imports",
+        "--max-line-length",
+        "79",
+        // "--experimental",
+        // "--remove-duplicate-keys",
+        // "--remove-unused-variables"
+    ],
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.banditEnabled": false,
+    "python.linting.pycodestyleEnabled": false,
+    // "python.sortImports.args": ["-rc", "--atomic"],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "python.formatting.blackPath": "black",
+    "python.linting.flake8Path": "flake8",
+    "python.linting.mypyPath": "mypy",
+    "python.formatting.yapfPath": "yapf",
+    "python.formatting.blackArgs": [
+        "--line-length=79"
+    ],
+    "isort.args": [
+        "--profile",
+        "black",
+        "--multi-line",
+        "3",
+        "--line-length",
+        "79"
+    ],
+    "editor.formatOnSave": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.envFile": "${workspaceFolder}/.vscode/.env",
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}",
+    ],
+    "grammarly.selectors": [
+        {
+            "language": "markdown",
+            "scheme": "file",
+            "pattern": "README-SOLUTION.md"
+        }
+    ],
+    "python.testing.unittestArgs": [],
+    "python.testing.cwd": "${workspaceFolder}",
+}

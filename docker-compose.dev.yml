@@ -1,0 +1,19 @@
+# See: https://docs.docker.com/compose/compose-file/compose-file-v3/
+version: "3.9"
+
+services:
+  # blueprint application
+  blueprint-app:
+    container_name: blueprint-app
+    # Will use this image name:tag when building
+    image: blueprint-app:dev
+    build:
+      context: .
+      target: dev
+    env_file:
+    - .env
+    environment:
+      EXAMPLE_ENV: some_value
+    restart: always
+    volumes:
+      - .:/app:Z
