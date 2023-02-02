@@ -1,0 +1,29 @@
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 79
+src_paths = ["cabify",]
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+allow_subclassing_any = true
+allow_untyped_calls = true
+pretty = true
+show_error_codes = true
+implicit_reexport = true
+allow_untyped_decorators = true
+warn_return_any = false
+
+[tool.pytest.ini_options]
+minversion = 7.0
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]

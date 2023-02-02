@@ -1,0 +1,4 @@
+.venv/
+tmp/
+.pytest_cache/
+.devcontainer/

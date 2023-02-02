@@ -1,0 +1,9 @@
+flake8
+mypy
+autopep8
+yesqa
+black
+isort
+types-protobuf
+autoflake
+pre-commit
